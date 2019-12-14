@@ -14,7 +14,6 @@
 		38CB175B23A482C4004FAE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CB175923A482C4004FAE2E /* Main.storyboard */; };
 		38CB175D23A482C9004FAE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CB175C23A482C9004FAE2E /* Assets.xcassets */; };
 		38CB176023A482C9004FAE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CB175E23A482C9004FAE2E /* LaunchScreen.storyboard */; };
-		38CB176B23A482CA004FAE2E /* SignInGoogleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB176A23A482CA004FAE2E /* SignInGoogleTests.swift */; };
 		38CB177623A482CA004FAE2E /* SignInGoogleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB177523A482CA004FAE2E /* SignInGoogleUITests.swift */; };
 		70806B7D5F6635E26B85AF1C /* Pods_SignInGoogle_SignInGoogleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54D4518CD741871B9B60E37 /* Pods_SignInGoogle_SignInGoogleUITests.framework */; };
 		F0B93260FF49A893C8E777E4 /* Pods_SignInGoogle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDB881FA4A21E09F2465805 /* Pods_SignInGoogle.framework */; };
@@ -49,8 +48,6 @@
 		38CB175F23A482C9004FAE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38CB176123A482C9004FAE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CB176623A482CA004FAE2E /* SignInGoogleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInGoogleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38CB176A23A482CA004FAE2E /* SignInGoogleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleTests.swift; sourceTree = "<group>"; };
-		38CB176C23A482CA004FAE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CB177123A482CA004FAE2E /* SignInGoogleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInGoogleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CB177523A482CA004FAE2E /* SignInGoogleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleUITests.swift; sourceTree = "<group>"; };
 		38CB177723A482CA004FAE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				38CB175223A482C4004FAE2E /* SignInGoogle */,
-				38CB176923A482CA004FAE2E /* SignInGoogleTests */,
 				38CB177423A482CA004FAE2E /* SignInGoogleUITests */,
 				38CB175123A482C4004FAE2E /* Products */,
 				CF04FABC20B484381964780A /* Pods */,
@@ -125,15 +121,6 @@
 				38CB176123A482C9004FAE2E /* Info.plist */,
 			);
 			path = SignInGoogle;
-			sourceTree = "<group>";
-		};
-		38CB176923A482CA004FAE2E /* SignInGoogleTests */ = {
-			isa = PBXGroup;
-			children = (
-				38CB176A23A482CA004FAE2E /* SignInGoogleTests.swift */,
-				38CB176C23A482CA004FAE2E /* Info.plist */,
-			);
-			path = SignInGoogleTests;
 			sourceTree = "<group>";
 		};
 		38CB177423A482CA004FAE2E /* SignInGoogleUITests */ = {
@@ -453,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38CB176B23A482CA004FAE2E /* SignInGoogleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
