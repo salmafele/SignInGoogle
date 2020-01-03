@@ -7,6 +7,8 @@ target 'SignInGoogle' do
 
   # Pods for SignInGoogle
 pod 'Google/SignIn'
+pod 'Firebase'
+
 
   target 'SignInGoogleTests' do
     inherit! :search_paths

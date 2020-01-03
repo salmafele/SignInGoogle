@@ -21,9 +21,11 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.3410090267-qvulqslmqnfm2o5d4ln0jdjetdh8kfo2</string>
+				<string>com.googleusercontent.apps.qg7hp4r89a4bq23dg65tpefm6d6vem9j-899781186525</string>
 			</array>
 		</dict>
 		<dict>

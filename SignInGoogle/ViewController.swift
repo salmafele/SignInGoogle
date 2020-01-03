@@ -9,23 +9,51 @@ import UIKit
 import Google
 import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInUIDelegate {
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
+    var nextViewController: NextViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var error: NSError?
-        GGLContext.sharedInstance().configureWithError(&error)
+        // Do any additional setup after loading the view, typically from a nib.
         
-        if error != nil {
-            print(error!)
-            return
-        }
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().clientID = "899781186525-8ijhjj2ahr5b4sf5i0akoe44p51kn0u0.apps.googleusercontent.com"
         
-        let signInButton = GIDSignInButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        signInButton.center = view.center
-        view.addSubview(signInButton)
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
+        
+        GIDSignIn.sharedInstance().signInSilently()
     }
-}
 
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func perform(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "nextVC" {
+            nextViewController = segue.destination as! NextViewController
+        }
+    }
+   
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error)
+        } else {
+            performSegue(withIdentifier: "nextVC", sender: self)
+        }
+    }
+
+    func sign(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+        if let error = error {
+            print(error)
+        }
+
+        nextViewController.dismiss(animated: true, completion: nil)
+
+    }
+    
+}
